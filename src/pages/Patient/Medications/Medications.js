@@ -42,7 +42,7 @@ function Medications({ id }) {
               <div className="row align-items-center">
                 <div className="col-md-12">
                   <h3 className="panel-title">Medications</h3>
-                  <button
+                  {/* <button
                     type="button"
                     className="btn-raised btn btn-danger btn-floating float-right"
                     data-toggle="modal"
@@ -50,7 +50,7 @@ function Medications({ id }) {
                     data-target="#addMedicationModal"
                   >
                     <i className="icon mdi mdi-plus" aria-hidden="true" />
-                  </button>
+                  </button> */}
                 </div>
               </div>
             </div>

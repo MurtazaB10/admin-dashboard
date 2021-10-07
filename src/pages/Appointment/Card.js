@@ -55,8 +55,8 @@ function Card(props) {
     window.location.pathname === "/Dashboard" ||
     window.location.pathname === "/dashboard" ||
     window.location.pathname === "/"
-      ? "72%"
-      : "90%";
+      ? "95%"
+      : "92%";
 
   return (
     <tr>

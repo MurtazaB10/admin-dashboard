@@ -48,14 +48,14 @@ function Documents({ id }) {
                 <div className="col-md-6">
                   <h3 className="panel-title">Documents</h3>
                 </div>
-                <button
+                {/* <button
                   type="button"
                   className="btn-raised btn btn-danger btn-floating "
                   data-toggle="modal"
                   data-target="#addDocumentModal"
                 >
                   <i className="icon mdi mdi-plus" aria-hidden="true" />
-                </button>
+                </button> */}
               </div>
             </div>
 

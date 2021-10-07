@@ -3,7 +3,6 @@ import { Switch } from "react-router-dom";
 import Dashboard from "../pages/Dashboard/Dashboard";
 import Appointment from "../pages/Appointment/Appointment";
 import Patient from "../pages/Patient/Patient";
-import PIQ from "../pages/PIQ/PIQ";
 import Expense from "../pages/Expense/Expense";
 import Commission from "../pages/Commision/Commission";
 import Services from "../pages/Services/Services";
@@ -15,6 +14,7 @@ import LoginLayoutRoute from "./LoginLayoutRoutes";
 import BasicLayout from "../layout/BasicLayout";
 import LoginLayout from "../layout/LoginLayout";
 import LoginRoutes from "./LoginRoutes";
+import Account from "../pages/Account/Account";
 
 const BasicRoutes = () => {
   return (
@@ -43,8 +43,6 @@ const BasicRoutes = () => {
         component={Appointment}
         layout={BasicLayout}
       />
-
-      <LoginLayoutRoute path="/PIQ" component={PIQ} layout={BasicLayout} />
       <LoginLayoutRoute
         path="/Expense"
         component={Expense}
@@ -53,6 +51,11 @@ const BasicRoutes = () => {
       <LoginLayoutRoute
         path="/Commission"
         component={Commission}
+        layout={BasicLayout}
+      />
+      <LoginLayoutRoute
+        path="/Account"
+        component={Account}
         layout={BasicLayout}
       />
       <LoginLayoutRoute
@@ -73,6 +76,11 @@ const BasicRoutes = () => {
       <LoginLayoutRoute
         path="/Laboratory"
         component={Laboratory}
+        layout={BasicLayout}
+      />
+      <LoginLayoutRoute
+        path="/Designation"
+        component={Appointment}
         layout={BasicLayout}
       />
       <LoginRoutes path="/Login" component={Login} layout={LoginLayout} />

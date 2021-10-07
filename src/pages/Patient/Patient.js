@@ -11,7 +11,6 @@ import ContactTracing from "./ContactTracing";
 import VisitLog from "./VisitLog/VisitLog";
 import Payment from "./Payment/Payment";
 import ProfileCard from "./PatientProfileCard/ProfileCard";
-import NurseNotes from "./NurseNotes.js/NursesNote";
 import { setPatientsList } from "../../redux/actions/patientListActions";
 import "react-datepicker/dist/react-datepicker.css";
 import EditPatientForm from "../Dashboard/EditPatientForm";
@@ -20,6 +19,8 @@ import Snackbar from "../../components/Alert/SnackBar";
 
 import { setDoctorsList } from "../../redux/actions/doctorActions";
 import PatientsList from "./PatientsList";
+import Emergency from "./Emergency/Emergency";
+import DoctorsNotes from "./DoctorNotes.js/DoctorsNote";
 
 const Patient = () => {
   const [confirmationSnackbarMessage, setConfirmationSnackbarMessage] =
@@ -75,6 +76,18 @@ const Patient = () => {
                     <a
                       class="nav-link active"
                       data-toggle="tab"
+                      href="#Emergency"
+                      role="tab"
+                      aria-controls="Emergency"
+                      aria-selected="true"
+                    >
+                      Emergency
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link"
+                      data-toggle="tab"
                       href="#patienttab1"
                       role="tab"
                       aria-controls="patienttab1"
@@ -87,12 +100,12 @@ const Patient = () => {
                     <a
                       class="nav-link"
                       data-toggle="tab"
-                      href="#nursenote"
+                      href="#patienttab2"
                       role="tab"
-                      aria-controls="nursenote"
+                      aria-controls="patienttab2"
                       aria-selected="false"
                     >
-                      Nurse's Notes
+                      Doctor's Notes
                     </a>
                   </li>
                   <li class="nav-item">
@@ -159,7 +172,7 @@ const Patient = () => {
               </div>
               <div class="tab-content" id="myTabContent">
                 <div
-                  class="tab-pane fade show active"
+                  class="tab-pane fade"
                   id="patienttab1"
                   role="tabpanel"
                 >
@@ -179,10 +192,11 @@ const Patient = () => {
                     </div>
                   </div>
                 </div>
-                <NurseNotes id={id} />
+                <DoctorsNotes id={id} />
                 <Documents id={id} />
                 <VisitLog id={id} />
                 <Payment id={id} />
+                <Emergency id={id} />
                 <Prescriptions id={id} />
                 <PatientLab id={id} />
               </div>

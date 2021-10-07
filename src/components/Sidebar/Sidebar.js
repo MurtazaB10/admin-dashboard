@@ -38,14 +38,6 @@ const Sidebar = () => {
               <span className="menu-title">Patient</span>
             </NavLink>
           </li>
-
-          <li className="nav-item">
-            <NavLink activeClassName="active" className="nav-link" to="/PIQ">
-              <i className="mdi mdi-file-check menu-icon" />
-              <span className="menu-title">PIQ</span>
-            </NavLink>
-          </li>
-
           <li className="nav-item">
             <NavLink
               activeClassName="active"
@@ -70,10 +62,20 @@ const Sidebar = () => {
             <NavLink
               activeClassName="active"
               className="nav-link"
+              to="/Account"
+            >
+              <i class="far fa-user"></i>
+              <span className="menu-title">Account</span>
+            </NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink
+              activeClassName="active"
+              className="nav-link"
               to="/Productlist"
             >
               <i className="mdi mdi-package menu-icon" />
-              <span className="menu-title">Product </span>
+              <span className="menu-title">Product</span>
             </NavLink>
           </li>
           <li className="nav-item">
@@ -104,6 +106,16 @@ const Sidebar = () => {
             >
               <i className="mdi mdi-hospital-building menu-icon" />
               <span className="menu-title">Laboratory</span>
+            </NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink
+              activeClassName="active"
+              className="nav-link"
+              to="/Designation"
+            >
+              <i class="far fa-address-card"></i>
+              <span className="menu-title">Designation</span>
             </NavLink>
           </li>
           <li className="nav-item">

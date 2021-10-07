@@ -11,6 +11,7 @@ import GraphCards from "./GraphCards";
 import PatientsList from "./DashboardPatients";
 import Snackbar from "../../components/Alert/SnackBar";
 import EditAppointmentModal from "../Appointment/EditAppointmentModal";
+import { setNursesList } from "../../redux/actions/nurseAction";
 
 const Dashboard = () => {
   const dispatch = useDispatch();
@@ -31,9 +32,12 @@ const Dashboard = () => {
   async function fetchData() {
     try {
       const result = await axios.get("nurse/dashboard");
-      const res = await axios.get("doctor/list");
+      const res = await axios.get("admin/doctor-list");
+      const r = await axios.get("admin/patient-list");
+      const nurse = await axios.get("admin/nurse-list");
+      dispatch(setNursesList(nurse.data.data));
       dispatch(setDoctorsList(res.data.data));
-      dispatch(setPatientsList(result.data.data.patient_list));
+      dispatch(setPatientsList(r.data.data));
       setDashboardData(result.data.data);
     } catch (error) {
       console.error(error);

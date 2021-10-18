@@ -15,6 +15,7 @@ import BasicLayout from "../layout/BasicLayout";
 import LoginLayout from "../layout/LoginLayout";
 import LoginRoutes from "./LoginRoutes";
 import Account from "../pages/Account/Account";
+import Doctor from "../pages/Doctor/Doctor";
 
 const BasicRoutes = () => {
   return (
@@ -56,6 +57,11 @@ const BasicRoutes = () => {
       <LoginLayoutRoute
         path="/Account"
         component={Account}
+        layout={BasicLayout}
+      />
+      <LoginLayoutRoute
+        path="/Doctor"
+        component={Doctor}
         layout={BasicLayout}
       />
       <LoginLayoutRoute
